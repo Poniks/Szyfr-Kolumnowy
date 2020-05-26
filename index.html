@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simulator SF</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
 
-  <body>
-    <h1>Szyfr Kolumnowy</h1>
-    <div class="container">
-      <p class="definition">
-        Szyfrowanie kolumnowe jest jedną z metod szyfrowania przestawienowego,
-        polegającego na zmianie kolejności znaków w szyfrowanym tekście. W tej
-        metodzie jest wykorzystywana tabela o dodatniej liczbie wierszy równej
-        <i>k</i>. Liczba <i>k</i> jest nazywana <i>kluczem</i>. Wiersze i
-        kolumny tabeli są numerowane liczbami naturalnymi, począwszy od 1. Znaki
-        tekstu, który ma być zaszyfrowany, wpisujemy do kolejnych kolumn tabeli,
-        zaczynając od jej lewego górnego rogu. W kolumnach nieparzystych znaki
-        wpisujemy od góry do dołu, a w parzystych od dołu do góry. Puste miejsca
-        w ostatniej rozpoczętej kolumnie wypełniamy znakiem "_" oznaczającym
-        spację. Następnie odczytujemy kolejne wiersze od góry do dołu (każdy z
-        nich od lewej do prawej), w wyniku czego uzyskujemy szyfrogram.
-      </p>
-      <p class="exampleText">
-        Przykład: dla klucza <i>k</i>=3 i tektstu MATURA_Z_INFORMATYKI budujemy
-        tabelę:
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Column cipher</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-      <table class="exampleTable">
-        <tr>
-          <td>M</td>
-          <td>A</td>
-          <td>_</td>
-          <td>F</td>
-          <td>O</td>
-          <td>Y</td>
-          <td>K</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>R</td>
-          <td>Z</td>
-          <td>N</td>
-          <td>R</td>
-          <td>T</td>
-          <td>I</td>
-        </tr>
-        <tr>
-          <td>T</td>
-          <td>U</td>
-          <td>_</td>
-          <td>I</td>
-          <td>M</td>
-          <td>A</td>
-          <td>_</td>
-        </tr>
-      </table>
+<body>
+  <h1>Szyfr Kolumnowy</h1>
+  <div class="container">
+    <p class="definition">
+      Szyfrowanie kolumnowe jest jedną z metod szyfrowania przestawienowego,
+      polegającego na zmianie kolejności znaków w szyfrowanym tekście. W tej
+      metodzie jest wykorzystywana tabela o dodatniej liczbie wierszy równej
+      <i>k</i>. Liczba <i>k</i> jest nazywana <i>kluczem</i>. Wiersze i
+      kolumny tabeli są numerowane liczbami naturalnymi, począwszy od 1. Znaki
+      tekstu, który ma być zaszyfrowany, wpisujemy do kolejnych kolumn tabeli,
+      zaczynając od jej lewego górnego rogu. W kolumnach nieparzystych znaki
+      wpisujemy od góry do dołu, a w parzystych od dołu do góry. Puste miejsca
+      w ostatniej rozpoczętej kolumnie wypełniamy znakiem "_" oznaczającym
+      spację. Następnie odczytujemy kolejne wiersze od góry do dołu (każdy z
+      nich od lewej do prawej), w wyniku czego uzyskujemy szyfrogram.
+    </p>
+    <p class="exampleText">
+      Przykład: dla klucza <i>k</i>=3 i tektstu MATURA_Z_INFORMATYKI budujemy
+      tabelę:
+    </p>
 
-      <p class="exampleText">i otrzymujemy szyfrogram MA_FOYKARZNRTITU_IMA_.</p>
-      <p>
-        Przykładowe szyfry: <br /><br />NKI-ATE-USGACYOKZZ-YYSJTCWEKI-SAEMTRLE-P
-        <br /><br />PROOBIPGSIS_R_EZEAM_
-      </p>
-      <input type="text" placeholder="Wpisz szyfr.." class="input" /><button
-        class="button"
-      >
-        Deszyfruj
-      </button>
+    <table class="exampleTable">
+      <tr>
+        <td>M</td>
+        <td>A</td>
+        <td>_</td>
+        <td>F</td>
+        <td>O</td>
+        <td>Y</td>
+        <td>K</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>R</td>
+        <td>Z</td>
+        <td>N</td>
+        <td>R</td>
+        <td>T</td>
+        <td>I</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>U</td>
+        <td>_</td>
+        <td>I</td>
+        <td>M</td>
+        <td>A</td>
+        <td>_</td>
+      </tr>
+    </table>
 
-      <div class="table"></div>
-    </div>
+    <p class="exampleText">i otrzymujemy szyfrogram MA_FOYKARZNRTITU_IMA_.</p>
+    <p>
+      Przykładowe szyfry: <br /><br />NKI-ATE-USGACYOKZZ-YYSJTCWEKI-SAEMTRLE-P
+      <br /><br />PROOBIPGSIS_R_EZEAM_
+    </p>
+    <input type="text" placeholder="Wpisz szyfr.." class="input" /><button class="button">
+      Deszyfruj
+    </button>
 
-    <script src="index.js"></script>
-  </body>
+    <div class="table"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
